@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Even Numbers</title>
+</head>
+<body>
+  <h1>Enter an Array of Numbers</h1>
+  <input type="text" id="arrayInput" placeholder="Enter numbers separated by commas">
+  <button onclick="displayEvenNumbers()">Display Even Numbers</button>
+  <p id="result"></p>
+
+  <script>
+    function displayEvenNumbers() {
+      let input = document.getElementById('arrayInput').value;
+      let numbers = input.split(',').map(Number);
+      let evenNumbers = numbers.filter(num => num % 2 === 0);
+      
+      document.getElementById('result').textContent = 'Even Numbers: ' + evenNumbers.join(', ');
+    }
+  </script>
+</body>
+</html>
