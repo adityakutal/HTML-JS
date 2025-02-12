@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Array List</title>
+    <script>
+        function submit() {
+            let username = document.getElementById('username').value;
+            let userage = document.getElementById('userage').value;
+            let userObject = {
+                name: username , age: userage
+            }
+            arrayOfObject.push(userObject);
+            document.getElementById("result").innerText=arrayOfObject;
+        }
+    </script>
+</head>
+
+<body>
+    <label>Name:</label><input id="username" type="text">
+    <label>Age:</label><input id="userage" type="text">
+    <button onclick="submit()" value="submit">Submit</button>
+    <button onclick="reset()" value="reset">Reset</button>
+    <div id="result"></div>
+</body>
+
+</html>
