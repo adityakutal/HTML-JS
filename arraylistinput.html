@@ -3,15 +3,19 @@
 <head>
     <title>Array List</title>
     <script>
+        let arrayOfObject=[];
         function submit() {
             let username = document.getElementById('username').value;
             let userage = document.getElementById('userage').value;
-            let userObject = {
-                name: username , age: userage
+            let ArrayObject = {
+               Name: username , age: userage
             }
-            arrayOfObject.push(userObject);
-            document.getElementById("result").innerText=arrayOfObject;
+            // console.log('ArrayObject:',Arrayobject);
+            arrayOfObject.push(ArrayObject)
+            console.log('arrayOfObject:',arrayOfObject);
+            document.getElementById("result").innerText=JSON.stringify(arrayOfObject)
         }
+    
     </script>
 </head>
 

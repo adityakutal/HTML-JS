@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>find in list</title>
+    <script>
+
+        function submit() {
+            let people = [
+                { name: 'John' },
+                { name: 'Mary' },
+                { name: 'Alice' }
+            ];
+            let input = document.getElementById("userinput").value;
+            people.map(Element => {
+                if (Element.name == input) {
+                    console.log(Element.name);
+                    document.getElementById("result").innerText = Element.name;
+                }
+            })
+
+        }
+    </script>
+</head>
+
+<body>
+    <label>Enter the element:</label><input id="userinput" type="text">
+    <button onclick="submit()">Submit</button>
+    <button>Reset</button>
+    <div id="result"></div>
+</body>
+
+</html>
