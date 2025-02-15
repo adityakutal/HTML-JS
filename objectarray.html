@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>count array</title>
+    <script>
+        function count() {
+            let input = document.getElementById("arraynumber").value;
+            let userNumber = document.getElementById("number").value;
+            let array = input.split(',');
+            let countNumber = {};
+            array.map(element => {
+                if (countNumber[element]) {
+                    countNumber[element] += 1;
+                } else {
+                    countNumber[element] = 1;
+                }
+            });
+            document.getElementById("result").innerHTML = JSON.stringify(countNumber);
+        }
+        console.log();
+    </script>
+</head>
+
+<body>
+    <label>Enter the array:</label><input id="arraynumber" type="text">
+    <label>Enter a number:</label><input id="number" type="text">
+    <button onclick="count()">submit</button>
+    <div id="result"></div>
+</body>
+
+</html>
